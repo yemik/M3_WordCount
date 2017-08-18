@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2739f065-04cb-4234-9520-e8ca2353cbdb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Coursework2.iml" afterPath="$PROJECT_DIR$/Coursework2.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/FileHandler.java" afterPath="$PROJECT_DIR$/src/main/java/FileHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/FileHandling.java" afterPath="$PROJECT_DIR$/src/main/java/FileHandling.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -383,7 +379,14 @@
       <option name="project" value="LOCAL" />
       <updated>1503063042280</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Minor interface changes">
+      <created>1503063824195</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1503063824195</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -436,7 +439,8 @@
     <MESSAGE value="Modified .gitignore" />
     <MESSAGE value="Defined the overall structure of solution using interfaces" />
     <MESSAGE value="Added classes implementing interfaces" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added classes implementing interfaces" />
+    <MESSAGE value="Minor interface changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor interface changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
