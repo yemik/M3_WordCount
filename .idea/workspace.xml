@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2739f065-04cb-4234-9520-e8ca2353cbdb" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/notes.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/FileHandler.java" afterPath="$PROJECT_DIR$/src/main/java/FileHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/FileHandling.java" afterPath="$PROJECT_DIR$/src/main/java/FileHandling.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,18 +48,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileHandler.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/FileHandler.java">
+      <file leaf-file-name="notes.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/notes.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1050#1051#0" expanded="true" />
-                <element signature="e#1086#1087#0" expanded="true" />
-                <element signature="e#1153#1154#0" expanded="true" />
-                <element signature="e#1177#1178#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="17">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -143,6 +136,7 @@
         <option value="$PROJECT_DIR$/src/main/java/WordCountManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/FileHandling.java" />
         <option value="$PROJECT_DIR$/src/main/java/FileHandler.java" />
+        <option value="$PROJECT_DIR$/resources/notes.txt" />
       </list>
     </option>
   </component>
@@ -393,7 +387,14 @@
       <option name="project" value="LOCAL" />
       <updated>1503063882790</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Further work on file handling.&#10;Before going home for weekend">
+      <created>1503072226477</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1503072226477</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -448,7 +449,8 @@
     <MESSAGE value="Added classes implementing interfaces" />
     <MESSAGE value="Minor interface changes" />
     <MESSAGE value="Beginning to implement FileHandling interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="Beginning to implement FileHandling interface" />
+    <MESSAGE value="Further work on file handling.&#10;Before going home for weekend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Further work on file handling.&#10;Before going home for weekend" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -525,16 +527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/FileHandling.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/FileHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -546,6 +538,24 @@
             <element signature="e#1153#1154#0" expanded="true" />
             <element signature="e#1177#1178#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/FileHandling.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/notes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
