@@ -1,17 +1,32 @@
 import java.io.*;
+import java.util.Scanner;
 
 public class FileHandler implements FileHandling {
     private final String path;
     String inputLine;
+    FileInputStream inputStream;
+    Scanner streamer;
 
-    FileHandler(String path) {
+    FileHandler(String path) throws FileNotFoundException {
         this.path = path;
+        inputStream = new FileInputStream(path);
+        this.streamer = new Scanner(inputStream, "UTF-8");
     }
 
-    public void readFile(File file) {
+    public String streamLine() {
+        if (streamer.hasNextLine()) {
+            return streamer.nextLine();
+        }
+        return "";
     }
 
-    public String readLine(File file) {
+    @Override
+    public void readFile(String filePath) {
+
+    }
+
+    @Override
+    public String readLine(String path) {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(path));
             while ((inputLine = reader.readLine()) != null) {
@@ -20,13 +35,16 @@ public class FileHandler implements FileHandling {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return "";
     }
 
-    public File[] splitFile(File largeFile) {
-        return new File[0];
+    @Override
+    public String[] splitFile(String path) {
+        return new String[0];
     }
 
-    public int findNoSplits(File largeFile) {
+    @Override
+    public int findNoSplits(String largeFilePath) {
         return 0;
     }
 }
