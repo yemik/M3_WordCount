@@ -1,25 +1,85 @@
 import java.io.File;
-import java.util.HashMap;
+import java.util.*;
 
-public class WordCounter implements WordCount {
+public class WordCounter { //implements WordCount {
+    private Map<String, Integer> wordMap = new HashMap<String, Integer> ();
+    private int noOfFrequentWords;
 
-    public HashMap<String, Integer> sortFile(File file) {
+    public WordCounter(int noOfFrequentWords) {
+        this.noOfFrequentWords = noOfFrequentWords;
+    }
+    public Map<String, Integer> sortFile(String path) {
         return null;
     }
 
-    public HashMap<String, Integer> addWords(File file) {
-        return null;
+    public void getTopWordCounts() {
+        FindFrequentWords frequentWords = new FindFrequentWords(noOfFrequentWords);
+        getTopWords(frequentWords);
+        outputResults(frequentWords);
     }
 
-    public HashMap<String, Integer> aggregateCounts(HashMap<String, Integer> wordCounts) {
-        return null;
+    public void addWords(String[] words) {
+        for (String word:words) {
+            if (!wordMap.containsKey(word)) {
+                wordMap.put(word, 1);
+            } else {
+                wordMap.put(word, wordMap.get(word) + 1);
+            }
+        }
+        if (wordMap.containsKey("")) {
+            wordMap.remove("");
+        }
     }
 
-    public HashMap<String, Integer> getTopWords(HashMap<String, Integer> wordCounts, int noOfFrequentWords) {
-        return null;
+    private void getTopWords(FindFrequentWords frequentWords) {
+        for (Map.Entry<String, Integer> wordCount : wordMap.entrySet()) {
+            frequentWords.add(new WordCount(wordCount.getKey(), wordCount.getValue()));
+        }
     }
 
-    public void outputResults(HashMap<String, Integer> wordCounts) {
+    private void outputResults(FindFrequentWords frequentWords) {
+        PriorityQueue<WordCount> maxHeap = new PriorityQueue<>(Comparator.comparingInt((WordCount wc) -> wc.wordCount).reversed());
+        maxHeap.addAll(frequentWords.minHeap);
+        System.out.println("The top " + noOfFrequentWords + " most occuring words (word: count)\n");
+//        for (WordCount wc:frequentWords.minHeap) {
+//            System.out.println(wc);
+//        }
+        while (!maxHeap.isEmpty()) {
+            System.out.println(maxHeap.poll());
+        }
+    }
 
+    static class FindFrequentWords {
+        PriorityQueue<WordCount> minHeap;
+        private int noOfFrequentWords;
+
+        public FindFrequentWords(int noOfFrequentWords) {
+            this.noOfFrequentWords = noOfFrequentWords;
+            this.minHeap = new PriorityQueue<>(Comparator.comparingInt(wc -> wc.wordCount));
+        }
+
+        public void add(WordCount newWord) {
+            if (minHeap.size() < noOfFrequentWords) {
+                minHeap.offer(newWord); // Insert the new word
+            } else if (minHeap.peek().wordCount < newWord.wordCount) { // compare the word with smallest frequency to the new word
+                minHeap.poll(); // Remove the least frequent word
+                minHeap.offer(newWord); // Insert the new word
+            }
+        }
+    }
+
+    static class WordCount {
+        private final String word;
+        private final int wordCount;
+
+        WordCount(String word, int count) {
+            this.word = word;
+            this.wordCount = count;
+        }
+
+        @Override
+        public String toString() {
+            return word + ": " + wordCount + " occurrences.";
+        }
     }
 }

@@ -1,49 +1,61 @@
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
-public class FileHandler implements FileHandling {
+public class FileHandler {// implements FileHandling {
     private final String path;
-    String inputLine;
-    FileInputStream inputStream;
-    Scanner streamer;
+
+//    FileInputStream inputStream;
+//    Scanner streamer;
+
+    WordCounter wc = new WordCounter(3);
 
     FileHandler(String path) throws FileNotFoundException {
         this.path = path;
-        inputStream = new FileInputStream(path);
-        this.streamer = new Scanner(inputStream, "UTF-8");
+//        inputStream = new FileInputStream(path);
+//        this.streamer = new Scanner(inputStream, "UTF-8");
     }
 
-    public String streamLine() {
-        if (streamer.hasNextLine()) {
-            return streamer.nextLine();
-        }
-        return "";
-    }
+//    public String streamLine() {
+//        if (streamer.hasNextLine()) {
+//            return streamer.nextLine();
+//        }
+//        return "";
+//    }
 
-    @Override
-    public void readFile(String filePath) {
-
-    }
-
-    @Override
-    public String readLine(String path) {
+    public void readFile() {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(path));
+//TODO reader.lines(); ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            String inputLine;
+            String[] words;
             while ((inputLine = reader.readLine()) != null) {
-                System.out.println(inputLine);
+                words = cleanLine(inputLine);
+                wc.addWords(words);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void displayWordCounts() {
+        wc.getTopWordCounts();
+    }
+
+//TODO/#############################################################################################################################
+    private String[] cleanLine(String line) {
+        return line.replaceAll("[^\\w\\s-']","").toLowerCase().trim().split("\\s+");
+    }
+
+    public String readLine(String path) {
         return "";
     }
 
-    @Override
     public String[] splitFile(String path) {
         return new String[0];
     }
 
-    @Override
     public int findNoSplits(String largeFilePath) {
         return 0;
     }
