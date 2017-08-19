@@ -1,3 +1,5 @@
+package com.m3s.ko;
+
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 

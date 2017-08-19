@@ -1,5 +1,4 @@
-import java.io.File;
-import java.util.HashMap;
+package com.m3s.ko;
 
 public interface FileHandling {
     String path = "";

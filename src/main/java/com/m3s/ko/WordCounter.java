@@ -1,7 +1,8 @@
-import java.io.File;
+package com.m3s.ko;
+
 import java.util.*;
 
-public class WordCounter { //implements WordCount {
+public class WordCounter { //implements com.m3s.ko.WordCount {
     private Map<String, Integer> wordMap = new HashMap<String, Integer> ();
     private int noOfFrequentWords;
 
@@ -11,6 +12,7 @@ public class WordCounter { //implements WordCount {
     public Map<String, Integer> sortFile(String path) {
         return null;
     }
+
 
     public void getTopWordCounts() {
         FindFrequentWords frequentWords = new FindFrequentWords(noOfFrequentWords);
@@ -40,8 +42,8 @@ public class WordCounter { //implements WordCount {
     private void outputResults(FindFrequentWords frequentWords) {
         PriorityQueue<WordCount> maxHeap = new PriorityQueue<>(Comparator.comparingInt((WordCount wc) -> wc.wordCount).reversed());
         maxHeap.addAll(frequentWords.minHeap);
-        System.out.println("The top " + noOfFrequentWords + " most occuring words (word: count)\n");
-//        for (WordCount wc:frequentWords.minHeap) {
+        System.out.println("The top " + noOfFrequentWords + " most occurring words (word:count)\n");
+//        for (com.m3s.ko.WordCount wc:frequentWords.minHeap) {
 //            System.out.println(wc);
 //        }
         while (!maxHeap.isEmpty()) {

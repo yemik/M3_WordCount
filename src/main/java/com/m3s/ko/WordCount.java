@@ -1,5 +1,5 @@
-import java.io.File;
-import java.util.HashMap;
+package com.m3s.ko;
+
 import java.util.Map;
 
 public interface WordCount {

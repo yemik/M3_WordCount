@@ -1,22 +1,26 @@
-import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+package com.m3s.ko;
 
-public class FileHandler {// implements FileHandling {
+import java.io.*;
+
+public class FileHandler {// implements com.m3s.ko.FileHandling {
     private final String path;
+    private final int noOfOutputWords;
+    final WordCounter wc;
 
 //    FileInputStream inputStream;
 //    Scanner streamer;
 
-    WordCounter wc = new WordCounter(3);
-
     FileHandler(String path) throws FileNotFoundException {
         this.path = path;
-//        inputStream = new FileInputStream(path);
-//        this.streamer = new Scanner(inputStream, "UTF-8");
+        this.noOfOutputWords = 3;
+        wc = new WordCounter(noOfOutputWords);
     }
 
+    FileHandler(String path, int noOfOutputWords) throws FileNotFoundException {
+        this.path = path;
+        this.noOfOutputWords = noOfOutputWords;
+        wc = new WordCounter(noOfOutputWords);
+    }
 //    public String streamLine() {
 //        if (streamer.hasNextLine()) {
 //            return streamer.nextLine();
@@ -27,13 +31,13 @@ public class FileHandler {// implements FileHandling {
     public void readFile() {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(path));
-//TODO reader.lines(); ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             String inputLine;
             String[] words;
             while ((inputLine = reader.readLine()) != null) {
                 words = cleanLine(inputLine);
                 wc.addWords(words);
             }
+            reader.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -43,7 +47,6 @@ public class FileHandler {// implements FileHandling {
         wc.getTopWordCounts();
     }
 
-//TODO/#############################################################################################################################
     private String[] cleanLine(String line) {
         return line.replaceAll("[^\\w\\s-']","").toLowerCase().trim().split("\\s+");
     }
