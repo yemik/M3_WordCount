@@ -18,6 +18,7 @@ public class WordCountTest {
         wc = new WordCounter(noOfFrequentWords);
     }
 
+//    Cannot access private variables, however tests pass when the variables are package-private
 //    @Test
 //    public void checkCorrectNoOfTopWords() {
 //        assertEquals(noOfFrequentWords, WordCounter.frequentWords.noOfFrequentWords);
@@ -30,7 +31,7 @@ public class WordCountTest {
 //
 //    @Test
 //    public void checkWordCountCount() {
-//        assertEquals(10, then.count);
+//        assertEquals(10, then.wordCount);
 //    }
 
     @Test

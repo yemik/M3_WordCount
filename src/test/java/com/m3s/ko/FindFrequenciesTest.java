@@ -31,6 +31,7 @@ public class FindFrequenciesTest {
 
     @Test
     public void checkPQueueIsMinHeap() {
+        // Check that the priority queue's first element is always the min
         WordCounter.frequentWords.addWord(in);
         WordCounter.frequentWords.addWord(and);
         assertEquals(in, WordCounter.frequentWords.minHeap.peek());
@@ -40,6 +41,7 @@ public class FindFrequenciesTest {
 
     @Test
     public void checkMinHeapSize() {
+        // Check that the addWord method respects the maximum size of the heap
         WordCounter.frequentWords.addWord(the);
         WordCounter.frequentWords.addWord(of);
         WordCounter.frequentWords.addWord(and);
@@ -50,6 +52,7 @@ public class FindFrequenciesTest {
 
     @Test
     public void checkMinHeapOrder() {
+        // Check that the priority queue's ordering is in line with a min heap
         WordCounter.frequentWords.addWord(as);
         WordCounter.frequentWords.addWord(and);
         WordCounter.frequentWords.addWord(in);
@@ -60,6 +63,7 @@ public class FindFrequenciesTest {
 
     @Test
     public void checkHeapContainsMaxOnly() {
+        // Check that the priority queue's ordering is in line with a min heap
         WordCounter.frequentWords.addWord(the);
         WordCounter.frequentWords.addWord(of);
         WordCounter.frequentWords.addWord(and);
@@ -74,6 +78,7 @@ public class FindFrequenciesTest {
 
     @Test
     public void checkHeapReplacesMin() {
+        // Check that when adding a higher count to the heap, the min is always the replaced word count
         WordCounter.frequentWords.addWord(and);
         WordCounter.frequentWords.addWord(in);
         WordCounter.frequentWords.addWord(as);

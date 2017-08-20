@@ -16,30 +16,4 @@ public class Log {
         PropertyConfigurator.configure(LOG_PROPERTIES_FILE);
         logger.info("Logging initialised");
     }
-
-    void traceMessage(String message) {
-        logger.trace(message);
-    }
-
-    void output(String message) {
-        System.out.println(message);
-        logger.trace(message);
-    }
-
-    void infoMessage(String message) {
-        logger.info(message);
-    }
-
-    void debugMessage(String message) {
-        logger.debug(message);
-    }
-
-    void errorMessage(String message) {
-        logger.error(message);
-    }
-
-    void exceptionMessage(String message, Exception exception) {
-        logger.error(message, exception);
-    }
-
 }

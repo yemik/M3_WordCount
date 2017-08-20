@@ -3,10 +3,10 @@ package com.m3s.ko;
 import java.io.IOException;
 
 public class WCMain {
+    static long averageTime;
     public static void main(String[] args) throws IOException {
         Log.initialiseLogging();
         Log.logger.info("Beginning program");
-        long averageTime;
         long startTime;
         FileHandler wordCountFile = new FileHandler("resources/aLargeFile",3);
         startTime = System.currentTimeMillis();

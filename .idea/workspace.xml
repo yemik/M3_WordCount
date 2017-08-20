@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2739f065-04cb-4234-9520-e8ca2353cbdb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/m3s/ko/FindFrequenciesTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/m3s/ko/FileHandling.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCount.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/WordCountTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/m3s/ko/WordCountTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/testFiles/caseInsensitive" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/testFiles/correctMax" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/testFiles/encodingCheck" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/testFiles/symbolCheck" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/m3s/ko/FileHandlerTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/m3s/ko/MainTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/log4j.properties" afterPath="$PROJECT_DIR$/resources/log4j.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/m3s/ko/FileHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/m3s/ko/FileHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/m3s/ko/Log.java" afterPath="$PROJECT_DIR$/src/main/java/com/m3s/ko/Log.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/m3s/ko/WCMain.java" afterPath="$PROJECT_DIR$/src/main/java/com/m3s/ko/WCMain.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCounter.java" afterPath="$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCounter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/m3s/ko/FindFrequenciesTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/m3s/ko/FindFrequenciesTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/m3s/ko/WordCountTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/m3s/ko/WordCountTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -19,17 +26,37 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/M3_WordCount$FileHandlerTest_checkCaseInsensitive.coverage" NAME="FileHandlerTest.checkCaseInsensitive Coverage Results" MODIFIED="1503259957971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.m3s.ko.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/M3_WordCount$FindFrequenciesTest.coverage" NAME="FindFrequenciesTest Coverage Results" MODIFIED="1503259996142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.m3s.ko.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/M3_WordCount$FileHandlerTest.coverage" NAME="FileHandlerTest Coverage Results" MODIFIED="1503262580813" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.m3s.ko.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/M3_WordCount$MainTest_checkRuntimeIsAcceptable.coverage" NAME="MainTest.checkRuntimeIsAcceptable Coverage Results" MODIFIED="1503260920948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.m3s.ko.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/M3_WordCount$WordCountTest.coverage" NAME="WordCountTest Coverage Results" MODIFIED="1503255838053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.m3s.ko.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/M3_WordCount$MainTest.coverage" NAME="MainTest Coverage Results" MODIFIED="1503262006457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.m3s.ko.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/M3_WordCount$com_m3s_ko_in_Coursework2.coverage" NAME="com.m3s.ko in Coursework2 Coverage Results" MODIFIED="1503262279300" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.m3s.ko.*</FILTER>
+    </SUITE>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Log.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/m3s/ko/Log.java">
+      <file leaf-file-name="WCMain.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/m3s/ko/WCMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-              <folding>
-                <element signature="e#957#958#0" expanded="true" />
-                <element signature="e#1005#1006#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="17" column="59" lean-forward="true" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -37,75 +64,9 @@
       <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/log4j.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="85" lean-forward="false" selection-start-line="15" selection-start-column="85" selection-end-line="15" selection-end-column="85" />
+            <state relative-caret-position="15">
+              <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WCMain.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/m3s/ko/WCMain.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="45" lean-forward="true" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileHandler.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/m3s/ko/FileHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="38" column="21" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WordCountTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/m3s/ko/WordCountTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#958#959#0" expanded="true" />
-                <element signature="e#1031#1032#0" expanded="true" />
-                <element signature="e#1071#1072#0" expanded="true" />
-                <element signature="e#1154#1155#0" expanded="true" />
-                <marker date="1503252397000" expanded="true" signature="590:905" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FindFrequenciesTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/m3s/ko/FindFrequenciesTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3480#3481#0" expanded="true" />
-                <element signature="e#3563#3564#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WordCounter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCounter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="30" lean-forward="true" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
-              <folding>
-                <element signature="e#2687#2688#0" expanded="true" />
-                <element signature="e#2762#2763#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -148,15 +109,21 @@
         <option value="$PROJECT_DIR$/src/main/java/com/m3s/ko/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCount.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/m3s/ko/Log.java" />
         <option value="$PROJECT_DIR$/src/test/java/WordCountTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/m3s/ko/WCMain.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/m3s/ko/WordCountTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/m3s/ko/FileHandling.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/m3s/ko/FindFrequenciesTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCounter.java" />
+        <option value="$PROJECT_DIR$/resources/testFiles/symbolCheck" />
+        <option value="$PROJECT_DIR$/resources/testFiles/correctMax" />
+        <option value="$PROJECT_DIR$/resources/testFiles/encodingCheck" />
+        <option value="$PROJECT_DIR$/resources/testFiles/caseInsensitive" />
+        <option value="$PROJECT_DIR$/src/main/java/com/m3s/ko/WCMain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/m3s/ko/Log.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/m3s/ko/MainTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/m3s/ko/FileHandlerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/m3s/ko/FileHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCounter.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/m3s/ko/WordCountTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/m3s/ko/FindFrequenciesTest.java" />
+        <option value="$PROJECT_DIR$/resources/log4j.properties" />
       </list>
     </option>
   </component>
@@ -203,6 +170,12 @@
               <item name="M3_WordCount" type="b2602c69:ProjectViewProjectNode" />
               <item name="M3_WordCount" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="M3_WordCount" type="b2602c69:ProjectViewProjectNode" />
+              <item name="M3_WordCount" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="testFiles" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="M3_WordCount" type="b2602c69:ProjectViewProjectNode" />
@@ -295,8 +268,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FindFrequenciesTest">
-    <configuration name="FindFrequenciesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.WCMain">
+    <configuration name="FileHandlerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.m3s.ko.*" />
@@ -307,7 +280,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.m3s.ko" />
-      <option name="MAIN_CLASS_NAME" value="com.m3s.ko.FindFrequenciesTest" />
+      <option name="MAIN_CLASS_NAME" value="com.m3s.ko.FileHandlerTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -321,21 +294,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="WCMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="com.m3s.ko.WCMain" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Coursework2" />
-      <envs />
-    </configuration>
-    <configuration name="WordCountTest.checkWordCountToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.m3s.ko.*" />
@@ -346,8 +305,33 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.m3s.ko" />
-      <option name="MAIN_CLASS_NAME" value="com.m3s.ko.WordCountTest" />
-      <option name="METHOD_NAME" value="checkWordCountToString" />
+      <option name="MAIN_CLASS_NAME" value="com.m3s.ko.MainTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="MainTest.checkRuntimeIsAcceptable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.m3s.ko.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Coursework2" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.m3s.ko" />
+      <option name="MAIN_CLASS_NAME" value="com.m3s.ko.MainTest" />
+      <option name="METHOD_NAME" value="checkRuntimeIsAcceptable" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -359,6 +343,25 @@
       </option>
       <envs />
       <patterns />
+    </configuration>
+    <configuration name="WCMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.m3s.ko.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.m3s.ko.WCMain" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Coursework2" />
+      <envs />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
@@ -441,16 +444,45 @@
       <properties />
       <listeners />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Application.WCMain" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.WordCountTest.checkWordCountToString" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.FindFrequenciesTest" />
+    <configuration name="com.m3s.ko in Coursework2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.m3s.ko.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Coursework2" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.m3s.ko" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.FileHandlerTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.MainTest.checkRuntimeIsAcceptable" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.MainTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.com.m3s.ko in Coursework2" />
+      <item index="4" class="java.lang.String" itemvalue="Application.WCMain" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.FindFrequenciesTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.WordCountTest.checkWordCountToString" />
-        <item index="2" class="java.lang.String" itemvalue="Application.WCMain" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.WCMain" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.FileHandlerTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.com.m3s.ko in Coursework2" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.MainTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.MainTest.checkRuntimeIsAcceptable" />
       </list>
     </recent_temporary>
   </component>
@@ -549,36 +581,46 @@
       <option name="project" value="LOCAL" />
       <updated>1503249038815</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Initial testing of WordCounter class. Removal of interfaces">
+      <created>1503255096108</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1503255096108</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FindFrequenciesTest - 2017.08.20 at 19h 40m 11s.xml">
+    <history-entry file="FileHandlerTest - 2017.08.20 at 21h 14m 07s.xml">
+      <configuration name="FileHandlerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FileHandlerTest - 2017.08.20 at 21h 38m 42s.xml">
+      <configuration name="FileHandlerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FileHandlerTest - 2017.08.20 at 21h 56m 22s.xml">
+      <configuration name="FileHandlerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FindFrequenciesTest - 2017.08.20 at 21h 13m 17s.xml">
       <configuration name="FindFrequenciesTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FindFrequenciesTest - 2017.08.20 at 19h 41m 08s.xml">
-      <configuration name="FindFrequenciesTest" configurationId="JUnit" />
+    <history-entry file="MainTest - 2017.08.20 at 21h 46m 54s.xml">
+      <configuration name="MainTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FindFrequenciesTest - 2017.08.20 at 19h 41m 35s.xml">
-      <configuration name="FindFrequenciesTest" configurationId="JUnit" />
+    <history-entry file="MainTest_checkRuntimeIsAcceptable - 2017.08.20 at 21h 24m 20s.xml">
+      <configuration name="MainTest.checkRuntimeIsAcceptable" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FindFrequenciesTest - 2017.08.20 at 19h 42m 32s.xml">
-      <configuration name="FindFrequenciesTest" configurationId="JUnit" />
+    <history-entry file="MainTest_checkRuntimeIsAcceptable - 2017.08.20 at 21h 28m 07s.xml">
+      <configuration name="MainTest.checkRuntimeIsAcceptable" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FindFrequenciesTest - 2017.08.20 at 19h 43m 27s.xml">
-      <configuration name="FindFrequenciesTest" configurationId="JUnit" />
+    <history-entry file="MainTest_checkRuntimeIsAcceptable - 2017.08.20 at 21h 31m 26s.xml">
+      <configuration name="MainTest.checkRuntimeIsAcceptable" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FindFrequenciesTest - 2017.08.20 at 19h 45m 51s.xml">
-      <configuration name="FindFrequenciesTest" configurationId="JUnit" />
+    <history-entry file="com_m3s_ko_in_Coursework2 - 2017.08.20 at 21h 50m 40s.xml">
+      <configuration name="com.m3s.ko in Coursework2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FindFrequenciesTest - 2017.08.20 at 19h 46m 04s.xml">
-      <configuration name="FindFrequenciesTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FindFrequenciesTest - 2017.08.20 at 19h 46m 44s.xml">
-      <configuration name="FindFrequenciesTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="WordCountTest_checkWordCountToString - 2017.08.20 at 19h 06m 41s.xml">
-      <configuration name="WordCountTest.checkWordCountToString" configurationId="JUnit" />
+    <history-entry file="com_m3s_ko_in_Coursework2 - 2017.08.20 at 21h 54m 12s.xml">
+      <configuration name="com.m3s.ko in Coursework2" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -592,7 +634,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -604,10 +645,11 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285568" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16361417" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13308914" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14652015" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -650,11 +692,12 @@
     <MESSAGE value="Made use of Java 8 parallel streams (confirmed faster via benchmarks), and ignored characters that were not UTF-8 encoding. Commented out useless code." />
     <MESSAGE value="Added in some logging and removed old code" />
     <MESSAGE value="Tidied up logging" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tidied up logging" />
+    <MESSAGE value="Initial testing of WordCounter class. Removal of interfaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial testing of WordCounter class. Removal of interfaces" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -707,10 +750,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="20" />
-          <folding>
-            <element signature="e#2687#2688#0" expanded="true" />
-            <element signature="e#2762#2763#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -726,22 +766,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/aSample.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/aSample2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="60" lean-forward="false" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
           <folding />
         </state>
       </provider>
@@ -786,25 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/m3s/ko/Log.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-          <folding>
-            <element signature="e#957#958#0" expanded="true" />
-            <element signature="e#1005#1006#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="85" lean-forward="false" selection-start-line="15" selection-start-column="85" selection-end-line="15" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/logFile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -818,34 +823,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/m3s/ko/WCMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="45" lean-forward="true" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/m3s/ko/FileHandling.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/m3s/ko/WordCountTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#958#959#0" expanded="true" />
-            <element signature="e#1031#1032#0" expanded="true" />
-            <element signature="e#1071#1072#0" expanded="true" />
-            <element signature="e#1154#1155#0" expanded="true" />
-            <marker date="1503252397000" expanded="true" signature="590:905" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -857,36 +839,135 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/aSample2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="38" column="57" lean-forward="false" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/aSample.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/testFiles/symbolCheck">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/testFiles/caseInsensitive">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/testFiles/encodingCheck">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/testFiles/correctMax">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/m3s/ko/Log.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/m3s/ko/MainTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="e#386#387#0" expanded="true" />
+            <element signature="e#469#470#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCounter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="30" lean-forward="true" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
-          <folding>
-            <element signature="e#2687#2688#0" expanded="true" />
-            <element signature="e#2762#2763#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1005">
+          <caret line="67" column="102" lean-forward="false" selection-start-line="67" selection-start-column="102" selection-end-line="67" selection-end-column="102" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/m3s/ko/FindFrequenciesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+        <state relative-caret-position="1200">
+          <caret line="80" column="103" lean-forward="false" selection-start-line="80" selection-start-column="103" selection-end-line="80" selection-end-column="103" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3480#3481#0" expanded="true" />
-            <element signature="e#3563#3564#0" expanded="true" />
+            <element signature="e#3896#3897#0" expanded="true" />
+            <element signature="e#3979#3980#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/m3s/ko/WordCountTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1503256314000" expanded="false" signature="687:1006" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/m3s/ko/FileHandlerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1185">
+          <caret line="91" column="81" lean-forward="false" selection-start-line="91" selection-start-column="81" selection-end-line="91" selection-end-column="81" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/m3s/ko/FileHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="38" column="21" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+        <state relative-caret-position="294">
+          <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/m3s/ko/WCMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="59" lean-forward="true" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>

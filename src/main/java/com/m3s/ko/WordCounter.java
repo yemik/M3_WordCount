@@ -24,6 +24,7 @@ class WordCounter {
 
         void addWord(WordCount newWord) {
             Log.logger.trace("Trying to add word: " + newWord);
+            // Add the new word count if the heap is not full, or if the word has a count greater than the current min
             if (minHeap.size() < noOfFrequentWords) {
                 Log.logger.trace("Inserting [" + newWord + "] into heap due to free space");
                 minHeap.offer(newWord); // Insert the new word
@@ -37,6 +38,7 @@ class WordCounter {
         void outputResults() {
             PriorityQueue<WordCount> maxHeap = new PriorityQueue<>(Comparator.comparingInt((WordCount wc) -> wc.wordCount).reversed());
             Log.logger.trace("Adding top word counts to Max Heap");
+            // Add the top words to the new max heap with an ordering in reverse of the min heap.
             maxHeap.addAll(minHeap);
 
             StringBuilder resultsHeader = new StringBuilder("The top ");
@@ -44,6 +46,7 @@ class WordCounter {
             System.out.println(resultsHeader);
             Log.logger.trace(resultsHeader);
 
+            // Remove and print the word count object with the greatest count in the heap
             while (!maxHeap.isEmpty()) {
                 StringBuilder wc = new StringBuilder(maxHeap.poll().toString());
                 Log.logger.trace(wc);
@@ -62,6 +65,7 @@ class WordCounter {
             this.wordCount = count;
         }
 
+        // Override the toString() method to access private word and wordCount variables when printing
         @Override
         public String toString() {
             return word + "\t:\t" + wordCount + " occurrences.";
