@@ -2,64 +2,50 @@ package com.m3s.ko;
 
 import java.util.*;
 
+
 class WordCounter { //implements com.m3s.ko.WordCount {
-//    private Map<String, Integer> wordMap = new HashMap<> ();
-    private final int noOfFrequentWords;
     static FindFrequentWords frequentWords;
 
     WordCounter(int noOfFrequentWords) {
+        Log.logger.trace("Setting the number of output words to " + noOfFrequentWords);
         frequentWords = new FindFrequentWords(noOfFrequentWords);
-        this.noOfFrequentWords = noOfFrequentWords;
     }
-
-//    void getTopWordCounts() {
-//        getTopWords(frequentWords);
-//        outputResults(frequentWords);
-//    }
-
-//    void addWords(String[] words) {
-//        for (String word:words) {
-//            if (!wordMap.containsKey(word)) {
-//                wordMap.put(word, 1);
-//            } else {
-//                wordMap.put(word, wordMap.get(word) + 1);
-//            }
-//        }
-//        if (wordMap.containsKey("")) {
-//            wordMap.remove("");
-//        }
-//    }
-
-//    private void getTopWords(FindFrequentWords frequentWords) {
-//        for (Map.Entry<String, Integer> wordCount : wordMap.entrySet()) {
-//            frequentWords.add(new WordCount(wordCount.getKey(), wordCount.getValue()));
-//        }
-//    }
 
     static class FindFrequentWords {
         PriorityQueue<WordCount> minHeap;
         private int noOfFrequentWords;
 
         FindFrequentWords(int noOfFrequentWords) {
+            Log.logger.trace("Setting the number of output words to " + noOfFrequentWords);
             this.noOfFrequentWords = noOfFrequentWords;
+            Log.logger.trace("Initialising the Min Heap");
             this.minHeap = new PriorityQueue<>(Comparator.comparingInt(wc -> wc.wordCount));
         }
 
         void addWord(WordCount newWord) {
+            Log.logger.trace("Adding word: " + newWord);
             if (minHeap.size() < noOfFrequentWords) {
+                Log.logger.trace("Inserting [" + newWord + "] into heap due to free space");
                 minHeap.offer(newWord); // Insert the new word
             } else if (minHeap.peek().wordCount < newWord.wordCount) { // compare the word with smallest frequency to the new word
                 minHeap.poll(); // Remove the least frequent word
+                Log.logger.trace("Inserting [" + newWord + "] into heap by replacing the least frequent word");
                 minHeap.offer(newWord); // Insert the new word
             }
         }
 
         void outputResults() {
             PriorityQueue<WordCount> maxHeap = new PriorityQueue<>(Comparator.comparingInt((WordCount wc) -> wc.wordCount).reversed());
+            Log.logger.trace("Adding top word counts to Max Heap");
             maxHeap.addAll(minHeap);
-            System.out.println("The top " + noOfFrequentWords + " most occurring words (word:count)\n");
+            StringBuilder resultsHeader = new StringBuilder("The top ");
+            resultsHeader.append(noOfFrequentWords).append(" most occurring words (word:count):\n______________________________________________");
+            System.out.println(resultsHeader);
+            Log.logger.trace(resultsHeader);
             while (!maxHeap.isEmpty()) {
-                System.out.println(maxHeap.poll());
+                StringBuilder wc = new StringBuilder(maxHeap.poll().toString());
+                Log.logger.trace(wc);
+                System.out.println(wc);
             }
         }
     }
@@ -69,13 +55,14 @@ class WordCounter { //implements com.m3s.ko.WordCount {
         private final int wordCount;
 
         WordCount(String word, int count) {
+            Log.logger.trace("Initialising word count object for: " + word + ", " + count);
             this.word = word;
             this.wordCount = count;
         }
 
         @Override
         public String toString() {
-            return word + ":\t" + wordCount + " occurrences.";
+            return word + "\t:\t" + wordCount + " occurrences.";
         }
     }
 }
