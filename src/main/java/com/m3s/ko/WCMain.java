@@ -16,6 +16,7 @@ public class WCMain {
         Log.logger.trace("Outputting the top word counts");
         wordCountFile.displayWordCounts();
         averageTime = System.currentTimeMillis()-startTime;
+        System.out.println("Average Runtime: " + averageTime/1000f + " seconds");
         Log.logger.debug("Average Runtime: " + averageTime/1000f + " seconds");
         Log.logger.info("Successful termination of program");
     }
