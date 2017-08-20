@@ -6,7 +6,7 @@ import java.nio.charset.CodingErrorAction;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
-class FileHandler {// implements com.m3s.ko.FileHandling {
+class FileHandler {
     private final String path;
     private final int noOfOutputWords;
     private final WordCounter wc;
@@ -39,7 +39,6 @@ class FileHandler {// implements com.m3s.ko.FileHandling {
                 .parallel()
                 .map(this::cleanLine)
                 .flatMap(Arrays::stream)
-//                .flatMap(line -> Arrays.asList(cleanLine(line)).stream())
                 .collect(Collectors.toConcurrentMap(word->word, w -> 1, Integer::sum))
                 .forEach((word, count) -> WordCounter.frequentWords.addWord(new WordCounter.WordCount(word, count)));
             Log.logger.trace("Closing the buffered reader after successful stream processing");
@@ -56,6 +55,6 @@ class FileHandler {// implements com.m3s.ko.FileHandling {
 
     private String[] cleanLine(String line) {
         Log.logger.trace("Cleaning the line [" + line + "] of foreign characters and splitting into words");
-        return line.replaceAll(acceptedChars,"").toLowerCase().trim().split(wordSplitTerm);
+        return line.replaceAll(acceptedChars,"").toLowerCase().split(wordSplitTerm);
     }
 }

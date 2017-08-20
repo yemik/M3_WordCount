@@ -3,7 +3,7 @@ package com.m3s.ko;
 import java.util.*;
 
 
-class WordCounter { //implements com.m3s.ko.WordCount {
+class WordCounter {
     static FindFrequentWords frequentWords;
 
     WordCounter(int noOfFrequentWords) {
@@ -23,7 +23,7 @@ class WordCounter { //implements com.m3s.ko.WordCount {
         }
 
         void addWord(WordCount newWord) {
-            Log.logger.trace("Adding word: " + newWord);
+            Log.logger.trace("Trying to add word: " + newWord);
             if (minHeap.size() < noOfFrequentWords) {
                 Log.logger.trace("Inserting [" + newWord + "] into heap due to free space");
                 minHeap.offer(newWord); // Insert the new word
@@ -38,10 +38,12 @@ class WordCounter { //implements com.m3s.ko.WordCount {
             PriorityQueue<WordCount> maxHeap = new PriorityQueue<>(Comparator.comparingInt((WordCount wc) -> wc.wordCount).reversed());
             Log.logger.trace("Adding top word counts to Max Heap");
             maxHeap.addAll(minHeap);
+
             StringBuilder resultsHeader = new StringBuilder("The top ");
             resultsHeader.append(noOfFrequentWords).append(" most occurring words (word:count):\n______________________________________________");
             System.out.println(resultsHeader);
             Log.logger.trace(resultsHeader);
+
             while (!maxHeap.isEmpty()) {
                 StringBuilder wc = new StringBuilder(maxHeap.poll().toString());
                 Log.logger.trace(wc);
