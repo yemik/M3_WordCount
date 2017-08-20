@@ -2,70 +2,64 @@ package com.m3s.ko;
 
 import java.util.*;
 
-public class WordCounter { //implements com.m3s.ko.WordCount {
-    private Map<String, Integer> wordMap = new HashMap<String, Integer> ();
-    private int noOfFrequentWords;
+class WordCounter { //implements com.m3s.ko.WordCount {
+//    private Map<String, Integer> wordMap = new HashMap<> ();
+    private final int noOfFrequentWords;
+    static FindFrequentWords frequentWords;
 
-    public WordCounter(int noOfFrequentWords) {
+    WordCounter(int noOfFrequentWords) {
+        frequentWords = new FindFrequentWords(noOfFrequentWords);
         this.noOfFrequentWords = noOfFrequentWords;
     }
-    public Map<String, Integer> sortFile(String path) {
-        return null;
-    }
 
+//    void getTopWordCounts() {
+//        getTopWords(frequentWords);
+//        outputResults(frequentWords);
+//    }
 
-    public void getTopWordCounts() {
-        FindFrequentWords frequentWords = new FindFrequentWords(noOfFrequentWords);
-        getTopWords(frequentWords);
-        outputResults(frequentWords);
-    }
-
-    public void addWords(String[] words) {
-        for (String word:words) {
-            if (!wordMap.containsKey(word)) {
-                wordMap.put(word, 1);
-            } else {
-                wordMap.put(word, wordMap.get(word) + 1);
-            }
-        }
-        if (wordMap.containsKey("")) {
-            wordMap.remove("");
-        }
-    }
-
-    private void getTopWords(FindFrequentWords frequentWords) {
-        for (Map.Entry<String, Integer> wordCount : wordMap.entrySet()) {
-            frequentWords.add(new WordCount(wordCount.getKey(), wordCount.getValue()));
-        }
-    }
-
-    private void outputResults(FindFrequentWords frequentWords) {
-        PriorityQueue<WordCount> maxHeap = new PriorityQueue<>(Comparator.comparingInt((WordCount wc) -> wc.wordCount).reversed());
-        maxHeap.addAll(frequentWords.minHeap);
-        System.out.println("The top " + noOfFrequentWords + " most occurring words (word:count)\n");
-//        for (com.m3s.ko.WordCount wc:frequentWords.minHeap) {
-//            System.out.println(wc);
+//    void addWords(String[] words) {
+//        for (String word:words) {
+//            if (!wordMap.containsKey(word)) {
+//                wordMap.put(word, 1);
+//            } else {
+//                wordMap.put(word, wordMap.get(word) + 1);
+//            }
 //        }
-        while (!maxHeap.isEmpty()) {
-            System.out.println(maxHeap.poll());
-        }
-    }
+//        if (wordMap.containsKey("")) {
+//            wordMap.remove("");
+//        }
+//    }
+
+//    private void getTopWords(FindFrequentWords frequentWords) {
+//        for (Map.Entry<String, Integer> wordCount : wordMap.entrySet()) {
+//            frequentWords.add(new WordCount(wordCount.getKey(), wordCount.getValue()));
+//        }
+//    }
 
     static class FindFrequentWords {
         PriorityQueue<WordCount> minHeap;
         private int noOfFrequentWords;
 
-        public FindFrequentWords(int noOfFrequentWords) {
+        FindFrequentWords(int noOfFrequentWords) {
             this.noOfFrequentWords = noOfFrequentWords;
             this.minHeap = new PriorityQueue<>(Comparator.comparingInt(wc -> wc.wordCount));
         }
 
-        public void add(WordCount newWord) {
+        void addWord(WordCount newWord) {
             if (minHeap.size() < noOfFrequentWords) {
                 minHeap.offer(newWord); // Insert the new word
             } else if (minHeap.peek().wordCount < newWord.wordCount) { // compare the word with smallest frequency to the new word
                 minHeap.poll(); // Remove the least frequent word
                 minHeap.offer(newWord); // Insert the new word
+            }
+        }
+
+        void outputResults() {
+            PriorityQueue<WordCount> maxHeap = new PriorityQueue<>(Comparator.comparingInt((WordCount wc) -> wc.wordCount).reversed());
+            maxHeap.addAll(minHeap);
+            System.out.println("The top " + noOfFrequentWords + " most occurring words (word:count)\n");
+            while (!maxHeap.isEmpty()) {
+                System.out.println(maxHeap.poll());
             }
         }
     }
@@ -81,7 +75,7 @@ public class WordCounter { //implements com.m3s.ko.WordCount {
 
         @Override
         public String toString() {
-            return word + ": " + wordCount + " occurrences.";
+            return word + ":\t" + wordCount + " occurrences.";
         }
     }
 }

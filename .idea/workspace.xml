@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2739f065-04cb-4234-9520-e8ca2353cbdb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/m3s/ko/WCMain.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/FileHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/m3s/ko/FileHandler.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/FileHandling.java" afterPath="$PROJECT_DIR$/src/main/java/com/m3s/ko/FileHandling.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/Log.java" afterPath="$PROJECT_DIR$/src/main/java/com/m3s/ko/Log.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/WordCount.java" afterPath="$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCount.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/WordCountController.java" afterPath="$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCountController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/WordCountManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCountManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/WordCounter.java" afterPath="$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCounter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCountManager.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/m3s/ko/FileHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/m3s/ko/FileHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/m3s/ko/WCMain.java" afterPath="$PROJECT_DIR$/src/main/java/com/m3s/ko/WCMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCountController.java" afterPath="$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCountController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCounter.java" afterPath="$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCounter.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -46,12 +40,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WCMain.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WCMain.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/m3s/ko/WCMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="16" selection-end-column="64" />
-              <folding />
+            <state relative-caret-position="255">
+              <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="47" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,34 +55,27 @@
       <file leaf-file-name="FileHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/m3s/ko/FileHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="19" lean-forward="true" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+            <state relative-caret-position="353">
+              <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding>
-                <marker date="1503171003000" expanded="false" signature="237:257" ph="..." />
-                <marker date="1503171003000" expanded="false" signature="677:802" ph="..." />
+                <element signature="imports" expanded="true" />
+                <element signature="e#875#917#0" expanded="false" />
+                <element signature="e#2264#2313#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WordCounter.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WordCounter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCounter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+            <state relative-caret-position="120">
+              <caret line="10" column="65" lean-forward="true" selection-start-line="10" selection-start-column="65" selection-end-line="11" selection-end-column="51" />
               <folding>
-                <element signature="e#159#176#0" expanded="true" />
+                <element signature="e#413#444#0" expanded="false" />
+                <element signature="e#2635#2636#0" expanded="true" />
+                <element signature="e#2708#2709#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WordCountManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCountManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -157,12 +146,12 @@
         <option value="$PROJECT_DIR$/src/main/java/FileHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCountManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/m3s/ko/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCounter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/m3s/ko/FileHandling.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCount.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/m3s/ko/FileHandler.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/m3s/ko/WCMain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/m3s/ko/FileHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCounter.java" />
       </list>
     </option>
   </component>
@@ -458,7 +447,14 @@
       <option name="project" value="LOCAL" />
       <updated>1503148558116</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Working solution, grossly inefficient in places, before Java8 Stream implementation">
+      <created>1503172833373</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1503172833374</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -482,8 +478,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285568" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -493,7 +489,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39918116" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -526,7 +522,8 @@
     <MESSAGE value="Further work on file handling.&#10;Before going home for weekend" />
     <MESSAGE value="Start of an inefficient implementation. Before making the switch to Java 8 Streams" />
     <MESSAGE value="Working solution, grossly inefficient in places. Will implement Java 8 streams alongside with the plan of benchmarking later to find the most efficient. Then further optimisation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working solution, grossly inefficient in places. Will implement Java 8 streams alongside with the plan of benchmarking later to find the most efficient. Then further optimisation" />
+    <MESSAGE value="Working solution, grossly inefficient in places, before Java8 Stream implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working solution, grossly inefficient in places, before Java8 Stream implementation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -584,7 +581,9 @@
         <state relative-caret-position="60">
           <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="20" />
           <folding>
-            <element signature="e#159#176#0" expanded="true" />
+            <element signature="e#413#444#0" expanded="false" />
+            <element signature="e#2635#2636#0" expanded="true" />
+            <element signature="e#2708#2709#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -636,14 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/notes.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/m3s/ko/Log.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -656,14 +647,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="12" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCountController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -684,20 +667,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCounter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-          <folding>
-            <element signature="e#159#176#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCountManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/notes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -710,22 +691,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/m3s/ko/FileHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/m3s/ko/WCMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="true" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+        <state relative-caret-position="255">
+          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="47" selection-end-column="7" />
           <folding>
-            <marker date="1503171003000" expanded="false" signature="237:257" ph="..." />
-            <marker date="1503171003000" expanded="false" signature="677:802" ph="..." />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/m3s/ko/WCMain.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/m3s/ko/FileHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="16" selection-end-column="64" />
+        <state relative-caret-position="353">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#875#917#0" expanded="false" />
+            <element signature="e#2264#2313#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/m3s/ko/WordCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="65" lean-forward="true" selection-start-line="10" selection-start-column="65" selection-end-line="11" selection-end-column="51" />
+          <folding>
+            <element signature="e#413#444#0" expanded="false" />
+            <element signature="e#2635#2636#0" expanded="true" />
+            <element signature="e#2708#2709#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

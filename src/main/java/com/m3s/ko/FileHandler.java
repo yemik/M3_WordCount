@@ -1,14 +1,18 @@
 package com.m3s.ko;
 
 import java.io.*;
+import java.nio.charset.Charset;
+import java.nio.charset.CharsetDecoder;
+import java.nio.charset.CodingErrorAction;
+import java.util.Arrays;
+import java.util.stream.Collectors;
 
-public class FileHandler {// implements com.m3s.ko.FileHandling {
+class FileHandler {// implements com.m3s.ko.FileHandling {
     private final String path;
     private final int noOfOutputWords;
     final WordCounter wc;
-
-//    FileInputStream inputStream;
-//    Scanner streamer;
+    private static final String acceptedChars = "[^\\w\\s-']";
+    private static final String wordSplitTerm = "\\s+";
 
     FileHandler(String path) throws FileNotFoundException {
         this.path = path;
@@ -21,45 +25,60 @@ public class FileHandler {// implements com.m3s.ko.FileHandling {
         this.noOfOutputWords = noOfOutputWords;
         wc = new WordCounter(noOfOutputWords);
     }
-//    public String streamLine() {
-//        if (streamer.hasNextLine()) {
-//            return streamer.nextLine();
+
+//    void readFile() throws IOException {
+//        try {
+//            BufferedReader reader = new BufferedReader(new FileReader(path));
+//            String inputLine;
+//            String[] words;
+//            while ((inputLine = reader.readLine()) != null) {
+//                words = inputLine.replaceAll(acceptedChars,"").toLowerCase().trim().split(wordSplitTerm);
+//                wc.addWords(words);
+//            }
+//            reader.close();
+//        } catch (IOException e) {
+//            e.printStackTrace();
 //        }
-//        return "";
 //    }
 
-    public void readFile() {
+    void readFileStream() throws IOException {
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(path));
-            String inputLine;
-            String[] words;
-            while ((inputLine = reader.readLine()) != null) {
-                words = cleanLine(inputLine);
-                wc.addWords(words);
-            }
+            FileInputStream inputFile = new FileInputStream(new File(path));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inputFile, Charset.forName("UTF-8").newDecoder().onMalformedInput(CodingErrorAction.IGNORE)));
+            reader.lines()
+                .parallel()
+                .map(this::cleanLine)
+                .flatMap(Arrays::stream)
+//                .flatMap(line -> Arrays.asList(cleanLine(line)).stream())
+                .collect(Collectors.toConcurrentMap(word->word, w -> 1, Integer::sum)) // Big O(n)
+                .forEach((word, count) -> wc.frequentWords.addWord(new WordCounter.WordCount(word, count)));
             reader.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public void displayWordCounts() {
-        wc.getTopWordCounts();
+//    void readFileStream2() throws IOException {
+//        try {
+//            FileInputStream inputFile = new FileInputStream(new File(path));
+//            BufferedReader reader = new BufferedReader(new InputStreamReader(inputFile, Charset.forName("UTF-8").newDecoder().onMalformedInput(CodingErrorAction.IGNORE)));
+//            reader.lines()
+//                .parallel()
+//                .flatMap(line -> Arrays.stream(cleanLine(line)))
+//                .collect(Collectors.toConcurrentMap(word->word, w -> 1, Integer::sum)) // Big O(n)
+//                .forEach((word, count) -> wc.frequentWords.addWord(new WordCounter.WordCount(word, count)));
+//            reader.close();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
+
+    void displayWordCounts() {
+//        wc.getTopWordCounts();
+        wc.frequentWords.outputResults();
     }
 
     private String[] cleanLine(String line) {
-        return line.replaceAll("[^\\w\\s-']","").toLowerCase().trim().split("\\s+");
-    }
-
-    public String readLine(String path) {
-        return "";
-    }
-
-    public String[] splitFile(String path) {
-        return new String[0];
-    }
-
-    public int findNoSplits(String largeFilePath) {
-        return 0;
+        return line.replaceAll(acceptedChars,"").toLowerCase().trim().split(wordSplitTerm);
     }
 }
