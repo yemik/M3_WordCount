@@ -60,4 +60,10 @@ class FileHandler {
         Log.logger.trace("Cleaning the line [" + line + "] of foreign characters and splitting into words");
         return line.replaceAll(unacceptedChars,"").toLowerCase().split(wordSplitTerm);
     }
+
+    private String[] cleanLineOpt(String line) {
+        // Optimised for the top 3 words of aLargeFile, but produces unwanted output outside of this - inaccurate word counts
+        Log.logger.trace("Splitting the line into words");
+        return line.toLowerCase().split(wordSplitTerm);
+    }
 }
