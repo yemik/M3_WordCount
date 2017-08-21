@@ -50,8 +50,8 @@ class FileHandler {
                     .forEach(lineMap::put);
 
             lineMap.keySet().parallelStream()
-                    .flatMap(line -> Arrays.asList(cleanLineCount(line, lineMap.get(line))).stream())
-                    .collect(Collectors.toConcurrentMap(word->(word.split(",")[0]), word -> Integer.parseInt(word.split(",")[1]), Integer::sum))
+                    .flatMap(line -> Arrays.stream(cleanLineCount(line, lineMap.get(line))))
+                    .collect(Collectors.toConcurrentMap(wordCount->(wordCount.split(",")[0]), wordCount -> Integer.parseInt(wordCount.split(",")[1]), Integer::sum))
                     .forEach((word, count) -> WordCounter.frequentWords.addWord(new WordCounter.WordCount(word, count)));
             Log.logger.trace("Closing the buffered reader after successful stream processing");
             reader.close();
