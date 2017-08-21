@@ -41,14 +41,13 @@ class WordCounter {
             // Add the top words to the new max heap with an ordering in reverse of the min heap.
             maxHeap.addAll(minHeap);
 
-            StringBuilder resultsHeader = new StringBuilder("The top ");
-            resultsHeader.append(noOfFrequentWords).append(" most occurring words (word:count):\n______________________________________________");
+            String resultsHeader = "The top " + noOfFrequentWords + " most occurring words (word:count):\n______________________________________________";
             System.out.println(resultsHeader);
             Log.logger.trace(resultsHeader);
 
             // Remove and print the word count object with the greatest count in the heap
             while (!maxHeap.isEmpty()) {
-                StringBuilder wc = new StringBuilder(maxHeap.poll().toString());
+                String wc = maxHeap.poll().toString();
                 Log.logger.trace(wc);
                 System.out.println(wc);
             }

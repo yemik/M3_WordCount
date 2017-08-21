@@ -9,9 +9,9 @@ public class WCMain {
         Log.logger.info("Beginning program");
         long startTime;
         FileHandler wordCountFile = new FileHandler("resources/aLargeFile",3);
+        Log.logger.trace("Reading the file and adding the top word counts");
         startTime = System.currentTimeMillis();
         Log.logger.debug("Setting start time to be " + startTime + "ms");
-        Log.logger.trace("Reading the file and adding the top word counts");
         wordCountFile.readFileStream();
         Log.logger.trace("Outputting the top word counts");
         wordCountFile.displayWordCounts();

@@ -4,14 +4,18 @@ import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.charset.CodingErrorAction;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
 class FileHandler {
     private final String path;
     private final int noOfOutputWords;
     private final WordCounter wc;
-    private static final String unacceptedChars = "[^\\w\\s-']";
+    private static final String unacceptedChars = "[^\\w\\s]";
     private static final String wordSplitTerm = "\\s+";
+    private Map<String, Integer> lineMap = new ConcurrentHashMap<>();
 
     FileHandler(String path) {
         this.path = path;
@@ -38,12 +42,17 @@ class FileHandler {
             Log.logger.trace("Streaming the current input lines in parallel");
             // Stream the lines in parallel from the buffered reader, clean them, and map them to a count before aggregating
             // the counts to form a total word count for each word. Then add these words to the min heap
+//            System.setProperty("java.util.concurrent.ForkJoinPool.common.parallelism", "16"); // uncomment to use 16 threads as opposed to 8
+
             reader.lines()
-                .parallel()
-                .map(this::cleanLine)
-                .flatMap(Arrays::stream)
-                .collect(Collectors.toConcurrentMap(word->word, w -> 1, Integer::sum))
-                .forEach((word, count) -> WordCounter.frequentWords.addWord(new WordCounter.WordCount(word, count)));
+                    .parallel()
+                    .collect(Collectors.toConcurrentMap(line->line, w -> 1, Integer::sum))
+                    .forEach(lineMap::put);
+
+            lineMap.keySet().parallelStream()
+                    .flatMap(line -> Arrays.asList(cleanLineCount(line, lineMap.get(line))).stream())
+                    .collect(Collectors.toConcurrentMap(word->(word.split(",")[0]), word -> Integer.parseInt(word.split(",")[1]), Integer::sum))
+                    .forEach((word, count) -> WordCounter.frequentWords.addWord(new WordCounter.WordCount(word, count)));
             Log.logger.trace("Closing the buffered reader after successful stream processing");
             reader.close();
         } catch (IOException e) {
@@ -59,6 +68,15 @@ class FileHandler {
     private String[] cleanLine(String line) {
         Log.logger.trace("Cleaning the line [" + line + "] of foreign characters and splitting into words");
         return line.replaceAll(unacceptedChars,"").toLowerCase().split(wordSplitTerm);
+    }
+
+    private String[] cleanLineCount(String line, int count) {
+        Log.logger.trace("Cleaning the line [" + line + "] of foreign characters and splitting into words");
+        String[] words = cleanLine(line);
+        for (int i=0; i<words.length; i++) {
+            words[i] = words[i] + "," + count;
+        }
+        return words;
     }
 
     private String[] cleanLineOpt(String line) {
